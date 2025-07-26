@@ -5,23 +5,41 @@ import Register from "../Page/Auth/Register";
 import Login from "../Page/Auth/Login";
 import Home from "../Page/Home/Home";
 import Dashboard from "../Page/Dashboard/Dashboard";
+import DashboardLayout from "../Page/Dashboard/DashboardLayout";
+import Profile from "../Components/Profile";
 
 const router = createBrowserRouter([
-    {path:"/",
-        Component:MainLayout,
-        children:[
+    {
+        path: "/",
+        Component: MainLayout,
+        children: [
             {
-                index:true,
-                path:"/",
-                Component:Home
+                index: true,
+                path: "/",
+                Component: Home
             },
             {
-                path:"/dashBoard",
-                Component:Dashboard
+                path: "/dashBoard",
+                Component: Dashboard
 
-            }
+            },
+
         ]
     },
+    {
+        path: "/dashboardLayout",
+        element: <DashboardLayout />,
+        children: [
+            {
+                path:"profile",
+                Component:Profile
+            }
+            // { path: "profile", element: <ProfilePage /> },
+            // { path: "another", element: <AnotherComponent /> },
+        ]
+    }
+    ,
+
     {
         path: "/auth",
         Component: AuthLayout,
