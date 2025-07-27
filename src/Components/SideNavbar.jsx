@@ -6,7 +6,7 @@ import Loading from "./Loading";
 const SideNavbar = () => {
   const { role, loading } = useRole();
 
-  if (loading) return <Loading />;
+  // if (loading) return <Loading />;
 
   const navLinkClasses = ({ isActive }) =>
     isActive
@@ -20,7 +20,7 @@ const SideNavbar = () => {
 
   const donerLinks = [
     { to: "/dashboard/donate", label: "Donate Food" },
-    { to: "/dashboard/my-donations", label: "My Donations" },
+    { to: "/dashboardLayout/dashBoard", label: "My Donations" },
     { to: "/dashboardLayout/create-donation-request", label: "Create donation request" },
   ];
 
