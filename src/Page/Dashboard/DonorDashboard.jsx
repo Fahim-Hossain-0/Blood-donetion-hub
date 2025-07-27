@@ -70,12 +70,7 @@ const DonorDashboard = () => {
                           </button>
                         </>
                       )}
-                      <Link
-                        to={`/dashboard/edit-donation/${req._id}`}
-                        className="btn btn-info btn-sm"
-                      >
-                        Edit
-                      </Link>
+                     <Link to={`/dashboardLayout/edit-donation/${req._id}`} className="btn btn-info btn-sm">Edit</Link>
                      <Link to={`/dashboardLayout/view-donation/${req._id}`} className="btn btn-secondary btn-sm">View</Link>
 
                     </td>
