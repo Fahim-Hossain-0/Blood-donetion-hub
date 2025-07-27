@@ -14,7 +14,7 @@ const TopNavbar = () => {
   const Links = (
     <>
       <NavLink to="/" className="font-semibold text-base">Home</NavLink>
-      <NavLink to="/dashboard" className="font-semibold text-base">Dashboard</NavLink>
+      <NavLink to="/dashboardLayout" className="font-semibold text-base">Dashboard</NavLink>
     </>
   );
 

@@ -4,9 +4,11 @@ import AuthLayout from "../Layout/AuthLayout";
 import Register from "../Page/Auth/Register";
 import Login from "../Page/Auth/Login";
 import Home from "../Page/Home/Home";
-import Dashboard from "../Page/Dashboard/Dashboard";
+// import Dashboard from "../Page/Dashboard/Dashboard";
 import DashboardLayout from "../Page/Dashboard/DashboardLayout";
 import Profile from "../Components/Profile";
+import DonorWelcome from "../Page/Dashboard/DonorWelcome";
+import CreateDonationRequest from "../Components/CreateDonationRequest";
 
 const router = createBrowserRouter([
     {
@@ -19,8 +21,8 @@ const router = createBrowserRouter([
                 Component: Home
             },
             {
-                path: "/dashBoard",
-                Component: Dashboard
+                // path: "/dashBoard",
+                // Component: Dashboard
 
             },
 
@@ -31,9 +33,18 @@ const router = createBrowserRouter([
         element: <DashboardLayout />,
         children: [
             {
-                path:"profile",
-                Component:Profile
-            }
+                path: "profile",
+                Component: Profile
+            },
+            {
+                path: "true",
+                Component: DonorWelcome
+
+            },
+            {
+                path: "create-donation-request",
+                element: <CreateDonationRequest />
+            },
             // { path: "profile", element: <ProfilePage /> },
             // { path: "another", element: <AnotherComponent /> },
         ]

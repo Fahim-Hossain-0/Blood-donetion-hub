@@ -1,11 +1,43 @@
 import React from "react";
-import { NavLink, Link } from "react-router";
+import { NavLink, Link } from "react-router"; // ✅ Fixed import
+import useRole from "../Hooks/useRole"; // adjust path if needed
+import Loading from "./Loading";
 
 const SideNavbar = () => {
+  const { role, loading } = useRole();
+
+  if (loading) return <Loading />;
+
   const navLinkClasses = ({ isActive }) =>
     isActive
       ? "block px-4 py-2 rounded bg-red-500 text-white font-semibold"
       : "block px-4 py-2 rounded hover:bg-red-100 text-gray-700";
+
+  const commonLinks = [
+    { to: "/", label: "Home" },
+    { to: "/dashboardLayout/profile", label: "Profile" },
+  ];
+
+  const donerLinks = [
+    { to: "/dashboard/donate", label: "Donate Food" },
+    { to: "/dashboard/my-donations", label: "My Donations" },
+    { to: "/dashboardLayout/create-donation-request", label: "Create donation request" },
+  ];
+
+  const moderatorLinks = [
+    { to: "/dashboard/review-foods", label: "Review Foods" },
+    { to: "/dashboard/manage-users", label: "Manage Users" },
+  ];
+
+  const adminLinks = [
+    { to: "/dashboard/all-users", label: "All Users" },
+    { to: "/dashboard/site-settings", label: "Site Settings" },
+  ];
+
+  let roleLinks = [];
+  if (role === "doner") roleLinks = donerLinks;
+  else if (role === "moderator") roleLinks = moderatorLinks;
+  else if (role === "admin") roleLinks = adminLinks;
 
   return (
     <div className="w-64 h-screen bg-gray-100 p-4 shadow-lg flex flex-col">
@@ -15,24 +47,13 @@ const SideNavbar = () => {
       </Link>
 
       <ul className="space-y-2">
-        {/* Home link */}
-        <li>
-          <NavLink to="/" className={navLinkClasses}>
-            Home
-          </NavLink>
-        </li>
-
-        {/* Dashboard routes */}
-        <li>
-          <NavLink to="/dashboard/profile" className={navLinkClasses}>
-            Profile
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/dashboard/another" className={navLinkClasses}>
-            Another
-          </NavLink>
-        </li>
+        {[...commonLinks, ...roleLinks].map((item) => (
+          <li key={item.to}>
+            <NavLink to={item.to} className={navLinkClasses}>
+              {item.label}
+            </NavLink>
+          </li>
+        ))}
       </ul>
     </div>
   );

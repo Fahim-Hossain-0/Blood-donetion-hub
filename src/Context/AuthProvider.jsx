@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { AuthContext } from './AuthContext';
 import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth';
-import { auth } from '../firebase/auth.config';
+// import { auth } from '../firebase/auth.config';
 import useAxiosPublic from '../Hooks/axiosPublic';
+import { auth } from '../firebase/auth.config';
 
 const AuthProvider = ({children}) => {
      const axiosPublic = useAxiosPublic();

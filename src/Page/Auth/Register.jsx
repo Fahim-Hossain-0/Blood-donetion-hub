@@ -8,7 +8,7 @@ import { updateProfile } from 'firebase/auth';
 import { AuthContext } from '../../Context/AuthContext';
 
 const Register = () => {
-    const { creatUser } = useContext(AuthContext);
+    const { createUser } = useContext(AuthContext);
     const [showPassword, setShowPassword] = useState(false);
     const [error, setError] = useState('');
     const navigate = useNavigate();
@@ -32,7 +32,7 @@ const Register = () => {
         const password = form.password.value;
         console.log("Password:", password);
 
-        creatUser(email, password)
+        createUser(email, password)
             .then((userCredential) => {
                 const user = userCredential.user;
 
