@@ -39,9 +39,10 @@ const AuthProvider = ({children}) => {
           .then((res) => {
             setUser(currentUser);
             console.log(res.data);
+             setLoading(false);
           });
       }
-
+      setUser(null);
       setLoading(false);
     });
     return () => {

@@ -19,7 +19,7 @@ const SideNavbar = () => {
   ];
 
   const donerLinks = [
-    { to: "/dashboard/donate", label: "Donate Food" },
+    // { to: "/dashboard/donate", label: "Donate Food" },
     { to: "/dashboardLayout/dashBoard", label: "My Donations" },
     { to: "/dashboardLayout/create-donation-request", label: "Create donation request" },
   ];
@@ -30,6 +30,7 @@ const SideNavbar = () => {
   ];
 
   const adminLinks = [
+    { to: "/dashboardLayout/adminDeshboard", label: "Admin deshboard" },
     { to: "/dashboard/all-users", label: "All Users" },
     { to: "/dashboard/site-settings", label: "Site Settings" },
   ];

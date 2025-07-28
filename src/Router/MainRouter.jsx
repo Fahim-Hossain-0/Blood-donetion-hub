@@ -12,6 +12,7 @@ import CreateDonationRequest from "../Components/CreateDonationRequest";
 import DonorDashboard from "../Page/Dashboard/DonorDashboard";
 import DonationRequestDetails from "../Page/Dashboard/DonationRequestDetails";
 import EditDonationRequest from "../Page/Dashboard/EditDonationRequest";
+import AdminDashboard from "../Page/AdminDeshboard/AdminDeshboard";
 
 const router = createBrowserRouter([
   {
@@ -57,6 +58,10 @@ const router = createBrowserRouter([
         path: "edit-donation/:id", // ✅ relative path
         element: <EditDonationRequest />,
       },
+      {
+        path:"adminDeshboard",
+        Component:AdminDashboard
+      }
 
       // { path: "profile", element: <ProfilePage /> },
       // { path: "another", element: <AnotherComponent /> },

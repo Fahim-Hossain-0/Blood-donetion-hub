@@ -66,7 +66,7 @@ const TopNavbar = () => {
                   )}
                 </div>
               </div>
-              <button onClick={handleSignOut} className="btn btn-primary">Sign out</button>
+              <button  onClick={handleSignOut} className="btn btn-primary">Sign out</button>
             </div>
           ) : (
             <Link to='/auth/login' className="btn btn-primary">Login</Link>

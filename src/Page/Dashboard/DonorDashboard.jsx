@@ -79,12 +79,8 @@ const DonorDashboard = () => {
               </tbody>
             </table>
           </div>
-          <Link
-            to="/dashboard/my-donations"
-            className="mt-4  btn btn-outline btn-primary"
-          >
-            View My All Requests
-          </Link>
+         
+          
         </>
       )}
     </div>
