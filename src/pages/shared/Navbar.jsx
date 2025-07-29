@@ -22,8 +22,8 @@ const Navbar = () => {
       <li>
         <NavLink
           to="/"
-          className={({ isActive }) =>
-            isActive ? "text-red-600 font-semibold" : "text-gray-700"
+         className={({ isActive }) =>
+            isActive ? "text-green-500 font-bold" : "text-gray-700 font-semibold"
           }
         >
           Home
@@ -32,8 +32,8 @@ const Navbar = () => {
       <li>
         <NavLink
           to="/donation-request"
-          className={({ isActive }) =>
-            isActive ? "text-red-600 font-semibold" : "text-gray-700"
+                  className={({ isActive }) =>
+            isActive ? "text-green-500 font-bold" : "text-gray-700 font-semibold"
           }
         >
           Donation Requests
@@ -42,8 +42,8 @@ const Navbar = () => {
       <li>
         <NavLink
           to="/blogs"
-          className={({ isActive }) =>
-            isActive ? "text-red-600 font-semibold" : "text-gray-700"
+                   className={({ isActive }) =>
+            isActive ? "text-green-500 font-bold" : "text-gray-700 font-semibold"
           }
         >
           Blog
@@ -52,8 +52,8 @@ const Navbar = () => {
       <li>
         <NavLink
           to="/search"
-          className={({ isActive }) =>
-            isActive ? "text-red-600 font-semibold" : "text-gray-700"
+                    className={({ isActive }) =>
+            isActive ? "text-green-500 font-bold" : "text-gray-700 font-semibold"
           }
         >
           Search Donors
@@ -63,7 +63,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-base-100 px-4 shadow-md">
+    <div className="navbar bg-base-100 px-4  mb-8">
       {/* Left: Brand + Mobile menu */}
       <div className="navbar-start">
         {/* Mobile Dropdown */}
@@ -107,8 +107,8 @@ const Navbar = () => {
         </div>
 
         {/* Logo */}
-        <Link to="/" className="text-xl font-bold ml-2">
-          🩸 Blood Donation
+        <Link to="/" className="text-2xl font-bold ml-2 text-green-800">
+           Blood Hub
         </Link>
       </div>
 

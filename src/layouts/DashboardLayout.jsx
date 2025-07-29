@@ -40,13 +40,13 @@ const DashboardLayout = () => {
       {role === "admin" && (
         <>
           <NavLink to="/dashboard/all-users" className={navLinkClass}>
-            👥 All Users
+             All Users
           </NavLink>
           <NavLink to="/dashboard/all-blood-donation-request" className={navLinkClass}>
-            🩸 All Blood Requests
+            All Blood Requests
           </NavLink>
           <NavLink to="/dashboard/content-management" className={navLinkClass}>
-            📝 Content Management
+             Content Management
           </NavLink>
         </>
       )}
@@ -54,10 +54,10 @@ const DashboardLayout = () => {
       {role === "volunteer" && (
         <>
           <NavLink to="/dashboard/all-blood-donation-request" className={navLinkClass}>
-            🩸 All Blood Requests
+            All Blood Requests
           </NavLink>
           <NavLink to="/dashboard/content-management" className={navLinkClass}>
-            📝 Content Management
+             Content Management
           </NavLink>
         </>
       )}
@@ -109,8 +109,8 @@ const DashboardLayout = () => {
       {/* Sidebar */}
       <div className="drawer-side">
         <label htmlFor="dashboard-drawer" className="drawer-overlay"></label>
-        <aside className="w-64 bg-gradient-to-br from-red-500 to-red-600 text-white p-6 flex flex-col shadow-lg min-h-screen">
-          <h2 className="text-3xl font-bold mb-8 text-center tracking-wide">🩸 Dashboard</h2>
+        <aside className="w-64 bg-gradient-to-br from-gray-500 to-green-600 text-white p-6 flex flex-col shadow-lg min-h-screen">
+          <h2 className="text-3xl font-bold mb-8 text-center tracking-wide">Dashboard</h2>
           <nav className="space-y-3">
             <SidebarLinks />
           </nav>

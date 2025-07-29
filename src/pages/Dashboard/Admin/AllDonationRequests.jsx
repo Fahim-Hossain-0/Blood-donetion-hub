@@ -41,7 +41,7 @@ const AllDonationRequests = () => {
 
   return (
     <div className="p-4 space-y-4">
-      <h2 className="text-2xl font-bold">All Blood Donation Requests 🩸</h2>
+      <h2 className="text-2xl font-bold">All Blood Donation Requests </h2>
 
       {/* ✅ Filter buttons */}
       <div className="flex gap-2 flex-wrap">

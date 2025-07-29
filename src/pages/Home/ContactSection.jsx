@@ -13,7 +13,6 @@ export default function ContactSection() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    
     Swal.fire({
       icon: "success",
       title: "Message Sent!",
@@ -30,14 +29,15 @@ export default function ContactSection() {
 
   return (
     <section id="contact" className="bg-base-200 py-16 px-4">
-      <div className="max-w-7xl mb-10 mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div className="max-w-7xl mb-10 mx-auto  grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* Left - Form */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
+          className="order-1"
         >
-          <h2 className="text-3xl font-bold mb-6 text-primary">Contact Us</h2>
+          <h2 className="text-3xl font-bold mb-6 text-green-600">Contact Us</h2>
           <form onSubmit={handleSubmit} className="space-y-4">
             <input
               type="text"
@@ -65,7 +65,7 @@ export default function ContactSection() {
               placeholder="Your Message"
               required
             ></textarea>
-            <button type="submit" className="btn btn-primary w-full">Send Message</button>
+            <button type="submit" className="btn btn-success w-full">Send Message</button>
           </form>
         </motion.div>
 
@@ -74,32 +74,32 @@ export default function ContactSection() {
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
-          className="space-y-6"
+          className="space-y-6 oreder-1"
         >
-          <h3 className="text-2xl font-semibold text-neutral">Get in Touch</h3>
+          <h3 className="text-2xl font-semibold text-green-700">Get in Touch</h3>
           <p className="text-gray-600">Have any questions or suggestions? Reach out to us anytime.</p>
 
           <div className="flex items-start gap-4">
-            <FaPhoneAlt className="text-xl text-primary mt-1" />
+            <FaPhoneAlt className="text-xl text-green-600 mt-1" />
             <div>
               <h4 className="font-semibold">Phone</h4>
-              <p>+880 1234-567890</p>
+              <p>+880 1234-567891</p>
             </div>
           </div>
 
           <div className="flex items-start gap-4">
-            <FaEnvelope className="text-xl text-primary mt-1" />
+            <FaEnvelope className="text-xl text-green-600 mt-1" />
             <div>
               <h4 className="font-semibold">Email</h4>
-              <p>support@blooddonation.org</p>
+              <p>support@gmail.com</p>
             </div>
           </div>
 
           <div className="flex items-start gap-4">
-            <FaMapMarkerAlt className="text-xl text-primary mt-1" />
+            <FaMapMarkerAlt className="text-xl text-green-600 mt-1" />
             <div>
               <h4 className="font-semibold">Address</h4>
-              <p>123 Red Crescent Street, Dhaka, Bangladesh</p>
+              <p>Baily Road, Dhaka, Bangladesh</p>
             </div>
           </div>
         </motion.div>
