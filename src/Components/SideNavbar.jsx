@@ -31,7 +31,7 @@ const SideNavbar = () => {
 
   const adminLinks = [
     { to: "/dashboardLayout/adminDeshboard", label: "Admin deshboard" },
-    { to: "/dashboard/all-users", label: "All Users" },
+    { to: "/dashboardLayout/allUsers", label: "All Users" },
     { to: "/dashboard/site-settings", label: "Site Settings" },
   ];
 

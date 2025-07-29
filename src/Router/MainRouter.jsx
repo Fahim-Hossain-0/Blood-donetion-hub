@@ -13,6 +13,7 @@ import DonorDashboard from "../Page/Dashboard/DonorDashboard";
 import DonationRequestDetails from "../Page/Dashboard/DonationRequestDetails";
 import EditDonationRequest from "../Page/Dashboard/EditDonationRequest";
 import AdminDashboard from "../Page/AdminDeshboard/AdminDeshboard";
+import AllUsers from "../Page/AdminDeshboard/AllUser";
 
 const router = createBrowserRouter([
   {
@@ -61,6 +62,10 @@ const router = createBrowserRouter([
       {
         path:"adminDeshboard",
         Component:AdminDashboard
+      },
+      {
+        path:'allUsers',
+        Component:AllUsers
       }
 
       // { path: "profile", element: <ProfilePage /> },
