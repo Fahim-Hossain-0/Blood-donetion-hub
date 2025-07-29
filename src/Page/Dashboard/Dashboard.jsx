@@ -12,7 +12,7 @@ export default function Dashboard() {
     return <Loading></Loading>;
   }
 
-  if (role === "doner") {
+  if (role === "donor") {
     return <div>User Dashboard</div>;
   }
   if (role === "moderator") {

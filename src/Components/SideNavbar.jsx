@@ -18,7 +18,7 @@ const SideNavbar = () => {
     { to: "/dashboardLayout/profile", label: "Profile" },
   ];
 
-  const donerLinks = [
+  const donorLinks = [
     // { to: "/dashboard/donate", label: "Donate Food" },
     { to: "/dashboardLayout/dashBoard", label: "My Donations" },
     { to: "/dashboardLayout/create-donation-request", label: "Create donation request" },
@@ -36,7 +36,7 @@ const SideNavbar = () => {
   ];
 
   let roleLinks = [];
-  if (role === "doner") roleLinks = donerLinks;
+  if (role === "donor") roleLinks = donorLinks;
   else if (role === "moderator") roleLinks = moderatorLinks;
   else if (role === "admin") roleLinks = adminLinks;
 

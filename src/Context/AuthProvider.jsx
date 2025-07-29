@@ -32,7 +32,7 @@ const AuthProvider = ({children}) => {
         axiosPublic
           .post("/add-user", {
             email: currentUser.email,
-            role: "doner",
+            role: "donor",
             status: "active",
             loginCount: 1,
           })

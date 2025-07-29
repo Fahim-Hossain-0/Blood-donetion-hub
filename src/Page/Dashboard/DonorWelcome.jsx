@@ -10,7 +10,7 @@ const DonorWelcome = () => {
 
   if (loading) return <Loading />;
 
-  if (role !== "doner") {
+  if (role !== "donor") {
     return <p className="text-red-600 font-bold">Access Denied: Donors Only</p>;
   }
 
