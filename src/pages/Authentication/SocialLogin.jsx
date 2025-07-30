@@ -38,7 +38,7 @@ const SocialLogin = () => {
         await axiosInstance.post('/users', userInfo);
       } catch (err) {
         if (err.response?.status === 409) {
-          console.log("User already exists in DB");
+          // console.log("User already exists in DB");
         } else {
           console.error("Failed to save user:", err);
         }

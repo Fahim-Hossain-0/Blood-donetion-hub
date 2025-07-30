@@ -16,6 +16,7 @@ const Login = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const onSubmit = async (data) => {
+    
   try {
     // 1. Firebase login
     const result = await signIn(data.email, data.password);
@@ -25,7 +26,8 @@ const Login = () => {
     const idToken = await user.getIdToken();
 
     // 3. Send to server to store in HTTP-only cookie
-    const res = await axiosInstance.post('/jwt', { token: idToken });
+    const res = await axiosInstance.post('/jwt', { token: idToken }, { withCredentials: true });
+
     setIsLoading(true);
     if (res.data.success) {
       Swal.fire("Welcome", "Logged in successfully!", "success");
