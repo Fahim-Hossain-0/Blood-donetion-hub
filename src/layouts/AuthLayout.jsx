@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 import bdImg from "../assets/blood-donation.jpg"
 const AuthLayout = () => {
   return (
-    <div className="min-h-screen grid grid-cols-1 md:grid-cols-2 bg-white">
+    <div className="min-h-screen  bg-white">
 
       {/* Animated Left Banner */}
-      <motion.div
+      {/* <motion.div
         initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1 }}
@@ -36,7 +36,7 @@ const AuthLayout = () => {
           alt="blood-donation"
           className="w-full max-w-sm rounded-2xl shadow-xl"
         />
-      </motion.div>
+      </motion.div> */}
 
       {/* Animated Right Form Side */}
       <motion.div

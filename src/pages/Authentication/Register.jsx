@@ -94,7 +94,7 @@ const Register = () => {
   return (
     <div className="max-w-md mx-auto mt-10 shadow-xl bg-white rounded-xl">
       <div className="p-8">
-        <h2 className="text-3xl font-bold text-center mb-6 text-red-600">Register</h2>
+        <h2 className="text-3xl font-bold text-center mb-6 text-blue-600">Register</h2>
 
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
           <input {...register("name", { required: true })} placeholder="Full Name" className="input input-bordered w-full" />

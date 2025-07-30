@@ -73,7 +73,7 @@ const Login = () => {
 
             <button
               type="submit"
-              className="btn w-full bg-gradient-to-r from-red-400 to-red-600 hover:from-red-500 hover:to-red-700 text-white font-semibold shadow-md transition-all duration-300" disabled={isLoading}
+              className="btn w-full bg-gradient-to-r from-blue-400 to-blue-600 hover:from-blue-500 hover:to-blue-700 text-white font-semibold shadow-md transition-all duration-300" disabled={isLoading}
             >
              {isLoading ? "Logging in..." : "Login"}
 
@@ -84,7 +84,7 @@ const Login = () => {
             <small>New here? <Link to="/register" className="text-blue-600 underline">Create Account</Link></small>
           </p>
 
-          <SocialLogin />
+          {/* <SocialLogin /> */}
         </div>
       </div>
     </div>

@@ -60,7 +60,7 @@ const CreateDonationRequest = () => {
   return (
     <div className="card bg-base-100 w-full max-w-2xl mx-auto my-10 shadow-2xl">
       <div className="card-body">
-        <h1 className="text-3xl font-bold mb-4 text-center text-red-600">🩸 Create Donation Request</h1>
+        <h1 className="text-3xl font-bold mb-4 text-center text-green-600">Create Donation Request</h1>
 
         <form onSubmit={handleSubmit(onSubmit)} className="grid gap-4">
 
@@ -124,7 +124,7 @@ const CreateDonationRequest = () => {
           {/* Message */}
           <textarea {...register('requestMessage', { required: true })} className="textarea textarea-bordered w-full" rows="4" placeholder="Message..." />
 
-          <button type="submit" className="btn w-full mt-4 bg-gradient-to-r from-red-500 to-red-700 text-white">
+          <button type="submit" className="btn w-full mt-4 bg-gradient-to-r from-green-500 to-green-700 text-white">
             Submit Request
           </button>
         </form>
