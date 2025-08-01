@@ -9,10 +9,12 @@ const AdminHome = ({ role }) => {
     totalFunds: 0,
     totalRequests: 0,
   });
+  console.log(stats);
 
   useEffect(() => {
     axios.get("/admin-stats").then((res) => {
       setStats(res.data);
+      console.log(res.data);
     });
   }, [axios]);
 

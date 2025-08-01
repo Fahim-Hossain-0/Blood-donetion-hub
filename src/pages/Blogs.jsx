@@ -29,7 +29,7 @@ const Blogs = () => {
         {blogs.map((blog) => (
           <div
             key={blog._id}
-            className="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition"
+            className="bg-[#EFEFEF] rounded-lg overflow-hidden shadow hover:shadow-lg transition p-4"
           >
             <img src={blog.thumbnail} alt={blog.title} className="w-full h-48 object-cover" />
             <div className="p-4">

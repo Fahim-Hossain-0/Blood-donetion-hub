@@ -65,8 +65,6 @@ const Register = () => {
       };
 
       await axiosInstance.post("/users", userInfo);
-      const idToken = await user.getIdToken();
-      await axiosInstance.post("/jwt", { token: idToken });
 
       Swal.fire("Success", "Account Created", "success");
       navigate(from);

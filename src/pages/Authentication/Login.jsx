@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router';
 import Swal from 'sweetalert2';
 import useAuth from '../../hooks/useAuth';
-import SocialLogin from './SocialLogin';
+// import SocialLogin from './SocialLogin';
 import useAxios from '../../hooks/useAxios';
 
 const Login = () => {
@@ -12,37 +12,30 @@ const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || '/';
-  const axiosInstance = useAxios();
+  // const axiosInstance = useAxios();
   const [isLoading, setIsLoading] = useState(false);
 
   const onSubmit = async (data) => {
-    
-  try {
-    // 1. Firebase login
-    const result = await signIn(data.email, data.password);
-    const user = result.user;
+    try {
+      setIsLoading(true);
+      
+      // 1. Firebase login
+      const result = await signIn(data.email, data.password);
+      const user = result.user;
 
-    // 2. Get Firebase ID token
-    const idToken = await user.getIdToken();
+      // 2. (Skipping token sending)
+      // const idToken = await user.getIdToken();
+      // await axiosInstance.post('/jwt', { token: idToken }, { withCredentials: true });
 
-    // 3. Send to server to store in HTTP-only cookie
-    const res = await axiosInstance.post('/jwt', { token: idToken }, { withCredentials: true });
-
-    setIsLoading(true);
-    if (res.data.success) {
       Swal.fire("Welcome", "Logged in successfully!", "success");
       navigate(from, { replace: true });
-    } else {
-      throw new Error("JWT Token Failed");
+
+    } catch (error) {
+      setIsLoading(false);
+      console.error(error);
+      Swal.fire("Login Failed", error?.message?.replace("Firebase: ", "") || "Something went wrong", "error");
     }
-
-  } catch (error) {
-    setIsLoading(false);
-    console.error(error);
-    Swal.fire("Login Failed", error?.message?.replace("Firebase: ", "") || "Something went wrong", "error");
-  }
-};
-
+  };
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-base-200 px-4">
@@ -75,10 +68,10 @@ const Login = () => {
 
             <button
               type="submit"
-              className="btn w-full bg-gradient-to-r from-blue-400 to-blue-600 hover:from-blue-500 hover:to-blue-700 text-white font-semibold shadow-md transition-all duration-300" disabled={isLoading}
+              className="btn w-full bg-gradient-to-r from-blue-400 to-blue-600 hover:from-blue-500 hover:to-blue-700 text-white font-semibold shadow-md transition-all duration-300"
+              disabled={isLoading}
             >
-             {isLoading ? "Logging in..." : "Login"}
-
+              {isLoading ? "Logging in..." : "Login"}
             </button>
           </form>
 
@@ -92,6 +85,5 @@ const Login = () => {
     </div>
   );
 };
-
 
 export default Login;

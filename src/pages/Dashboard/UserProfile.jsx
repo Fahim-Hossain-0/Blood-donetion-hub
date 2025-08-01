@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import useAuth from '../../hooks/useAuth';
 import useAxios from '../../hooks/useAxios';
 import Swal from 'sweetalert2';
+// import { getAuth } from "firebase/auth"; // 🔑 Import Firebase auth
 
 const UserProfile = () => {
   const { user } = useAuth();
@@ -11,11 +12,11 @@ const UserProfile = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [formData, setFormData] = useState({});
 
-  // Fetch user profile from DB
+  // ✅ Basic version without Firebase token
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const res = await axiosInstance.get('/profile', { withCredentials: true });
+        const res = await axiosInstance.get(`/profile?email=${user?.email}`);
         setProfile(res.data);
         setFormData(res.data);
       } catch (err) {
@@ -23,8 +24,39 @@ const UserProfile = () => {
         Swal.fire("Error", "Failed to fetch profile", "error");
       }
     };
+
+    fetchProfile();
+  }, [axiosInstance, user?.email]);
+
+  // 🔒 Firebase token version (commented out)
+  /*
+  useEffect(() => {
+    const fetchProfile = async () => {
+      try {
+        const auth = getAuth();
+        const user = auth.currentUser;
+
+        if (!user) return;
+
+        const token = await user.getIdToken();
+
+        const res = await axiosInstance.get(`/profile?email=${user.email}`, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
+
+        setProfile(res.data);
+        setFormData(res.data);
+      } catch (err) {
+        console.error(err);
+        Swal.fire("Error", "Failed to fetch profile", "error");
+      }
+    };
+
     fetchProfile();
   }, [axiosInstance]);
+  */
 
   const handleChange = e => {
     const { name, value } = e.target;
@@ -44,8 +76,6 @@ const UserProfile = () => {
       Swal.fire("Error", "Update failed", "error");
     }
   };
-
-//   if (!profile) return <p>Loading...</p>;
 
   return (
     <div className="max-w-xl mx-auto bg-white shadow-md p-6 rounded">
