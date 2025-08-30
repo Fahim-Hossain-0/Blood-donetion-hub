@@ -18,8 +18,8 @@ const Blogs = () => {
   if (isLoading) return <Loading />;
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8 space-y-6">
-      <h1 className="text-3xl font-bold text-center text-green-600">Published Blogs 📝</h1>
+    <div className="container mx-auto mt-28 mb-4">
+      <h1 className="text-3xl font-bold text-center text-green-600 mb-14">Published Blogs 📝</h1>
 
       {blogs.length === 0 && (
         <p className="text-center text-gray-500">No blogs found.</p>
@@ -47,6 +47,8 @@ const Blogs = () => {
           </div>
         ))}
       </div>
+                
+
     </div>
   );
 };

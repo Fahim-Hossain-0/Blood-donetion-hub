@@ -1,53 +1,8 @@
 import React from "react";
 import { FaHandsHelping, FaTint, FaUsers } from "react-icons/fa";
 import { motion } from "framer-motion";
-
-// const features = [
-//   {
-//     id: 1,
-//     icon: <FaHandsHelping className="text-red-600 w-12 h-12" />,
-//     title: "Unite Donors & Recipients",
-//     desc: "Seamlessly connect life-saving donors with those in urgent need within your community.",
-//   },
-//   {
-//     id: 2,
-//     icon: <FaTint className="text-red-600 w-12 h-12" />,
-//     title: "Streamlined Donation Management",
-//     desc: "Effortlessly create, monitor, and update blood donation requests with real-time tracking.",
-//   },
-//   {
-//     id: 3,
-//     icon: <FaUsers className="text-red-600 w-12 h-12" />,
-//     title: "Secure Role-Based Access",
-//     desc: "Empower admins, donors, and volunteers with tailored access and seamless coordination.",
-//   },
-// ];
-
-
-// const features = [
-//   {
-//     id: 1,
-//     icon: <FaHandsHelping className="text-red-600 w-12 h-12" />,
-//     title: "Saves Lives in Emergencies",
-//     desc: "Your donated blood can be the difference between life and death during accidents, surgeries, and natural disasters.",
-//   },
-//   {
-//     id: 2,
-//     icon: <FaTint className="text-red-600 w-12 h-12" />,
-//     title: "Supports Patients with Chronic Illnesses",
-//     desc: "Regular donations are vital for patients battling cancer, thalassemia, and other long-term conditions.",
-//   },
-//   {
-//     id: 3,
-//     icon: <FaUsers className="text-red-600 w-12 h-12" />,
-//     title: "Strengthens Community Health",
-//     desc: "A steady blood supply ensures hospitals are ready to help anyone, anytime — creating a healthier, safer community.",
-//   },
-// ];
-
-
 import { FaHeartbeat, FaProcedures, FaHospitalAlt } from "react-icons/fa";
-
+  
 const features = [
   {
     id: 1,
@@ -71,7 +26,7 @@ const features = [
 
 export default function FeaturedSection() {
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 mt-8">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 mt-8">
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
