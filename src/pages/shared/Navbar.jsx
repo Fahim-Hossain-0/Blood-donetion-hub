@@ -22,8 +22,10 @@ const Navbar = () => {
       <li>
         <NavLink
           to="/"
-         className={({ isActive }) =>
-            isActive ? "text-green-500 font-bold" : "text-gray-700 font-semibold"
+          className={({ isActive }) =>
+            isActive
+              ? "text-gray-700 font-bold border-b-2 border-green-300 rounded-none"
+              : "text-green-200 font-semibold"
           }
         >
           Home
@@ -32,8 +34,10 @@ const Navbar = () => {
       <li>
         <NavLink
           to="/donation-request"
-                  className={({ isActive }) =>
-            isActive ? "text-green-500 font-bold" : "text-gray-700 font-semibold"
+          className={({ isActive }) =>
+            isActive
+              ? "text-gray-700 font-bold border-b-2 border-green-300 rounded-none"
+              : "text-green-200 font-semibold"
           }
         >
           Donation Requests
@@ -42,28 +46,36 @@ const Navbar = () => {
       <li>
         <NavLink
           to="/blogs"
-                   className={({ isActive }) =>
-            isActive ? "text-green-500 font-bold" : "text-gray-700 font-semibold"
+className={({ isActive }) =>
+            isActive
+              ? "text-gray-700 font-bold border-b-2 border-green-300 rounded-none"
+              : "text-green-200 font-semibold"
           }
         >
           Blog
         </NavLink>
       </li>
-      <li>
+      {
+        user &&(
+          <li>
         <NavLink
           to="/search"
-                    className={({ isActive }) =>
-            isActive ? "text-green-500 font-bold" : "text-gray-700 font-semibold"
+          className={({ isActive }) =>
+            isActive
+              ? "text-gray-700 font-bold border-b-2 border-green-300 rounded-none"
+              : "text-green-200 font-semibold"
           }
         >
           Search Donors
         </NavLink>
       </li>
+        )
+      }
     </>
   );
 
   return (
-    <div className="navbar bg-base-100 px-4  mb-8">
+    <div className="navbar container mx-auto py-3">
       {/* Left: Brand + Mobile menu */}
       <div className="navbar-start">
         {/* Mobile Dropdown */}
@@ -76,7 +88,12 @@ const Navbar = () => {
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
             </svg>
           </button>
           <ul
@@ -107,8 +124,8 @@ const Navbar = () => {
         </div>
 
         {/* Logo */}
-        <Link to="/" className="text-2xl font-bold ml-2 text-green-800">
-           Blood Hub
+        <Link to="/" className="text-3xl font-bold text-white">
+          Blood Hub
         </Link>
       </div>
 
@@ -133,7 +150,7 @@ const Navbar = () => {
             <div
               tabIndex={0}
               role="button"
-              className="btn btn-sm btn-ghost avatar tooltip tooltip-bottom"
+              className="avatar tooltip tooltip-bottom"
               data-tip={user?.displayName || "User"}
             >
               <div className="w-8 rounded-full">

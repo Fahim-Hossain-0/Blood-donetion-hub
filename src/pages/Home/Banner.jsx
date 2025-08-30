@@ -5,7 +5,7 @@ const Banner = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="relative bg-gradient-to-br from-blue-100 to-green-300 text-white py-24 px-4 text-center overflow-hidden pt-12 rounded-2xl">
+    <section className="relative bg-gradient-to-br from-blue-100 to-green-300 text-white text-center overflow-hidden rounded-2xl mt-32 py-34">
       {/* Background Light Bubbles */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-pulse -z-10" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-ping -z-10" />
@@ -18,7 +18,7 @@ const Banner = () => {
 
         className="text-4xl md:text-6xl font-extrabold mb-4 leading-16 text-red-500"
       >
-       Your shared blood <br /> <span className='text-yellow-400'>can be</span> <br /> <span className='text-green-400'>
+       You'r shared blood <br /> <span className='text-yellow-400'>can be</span> <br /> <span className='text-green-400'>
         someone’s lifeline
        </span>
       </motion.h1>

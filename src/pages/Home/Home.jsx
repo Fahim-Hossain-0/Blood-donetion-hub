@@ -5,7 +5,7 @@ import ContactSection from './ContactSection';
 
 const Home = () => {
     return (
-        <div>
+        <div className="container mx-auto">
             <Banner />
             <FeaturedSection/>
             <ContactSection/>

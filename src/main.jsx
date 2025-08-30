@@ -14,12 +14,11 @@ const queryClient = new QueryClient();
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <div className="urbanist max-w-3/4 mx-auto">
+
       <QueryClientProvider client={queryClient}>
         <AuthProvider>
           <RouterProvider router={router} />
         </AuthProvider>
       </QueryClientProvider>
-    </div>
     </StrictMode>,
 )
