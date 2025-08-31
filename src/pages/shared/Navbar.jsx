@@ -71,6 +71,18 @@ className={({ isActive }) =>
       </li>
         )
       }
+       <li>
+        <NavLink
+          to="/about"
+className={({ isActive }) =>
+            isActive
+              ? "text-gray-700 font-bold border-b-2 border-green-300 rounded-none"
+              : "text-green-200 font-semibold"
+          }
+        >
+          About
+        </NavLink>
+      </li>
     </>
   );
 

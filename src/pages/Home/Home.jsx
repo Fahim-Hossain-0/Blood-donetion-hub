@@ -4,6 +4,9 @@ import FeaturedSection from './FeaturedSection';
 import ContactSection from './ContactSection';
 import Blogs from '../Blogs';
 import { Link } from 'react-router';
+import HowItWorks from './HowItWorks';
+import UserReviews from './UserReviews';
+import FAQ from './FAQ';
 
 const Home = () => {
     return (
@@ -16,7 +19,11 @@ const Home = () => {
                   See All
                 </Link>
             </div>
+            <HowItWorks></HowItWorks>
+            <UserReviews></UserReviews>
+
             <ContactSection/>
+            <FAQ></FAQ>
         </div>
     );
 };

@@ -28,7 +28,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="bg-base-200 py-16 px-4">
+    <section id="contact" className="bg-base-200 py-16 px-4 scroll-mt-42">
       <div className="max-w-7xl mb-10 mx-auto  grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* Left - Form */}
         <motion.div

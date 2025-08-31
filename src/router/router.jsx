@@ -25,6 +25,7 @@ import FundPayment from "../pages/Dashboard/Funding/FundPayment";
 import FundingPage from "../pages/Dashboard/Funding/FundingPage";
 import DonationRequestView from "../pages/Dashboard/DonationRequestView";
 import EditDonationRequest from "../pages/Dashboard/EditDonationRequest";
+import About from "../pages/About";
 
 const router = createBrowserRouter([
   {
@@ -32,8 +33,9 @@ const router = createBrowserRouter([
     Component: RootLayout
     ,
     children: [
-      {
+      { 
         index: true,
+        // path:'home',
         Component: Home
       },
       {
@@ -55,6 +57,10 @@ const router = createBrowserRouter([
       {
         path: "/donation-request/:id",
         element: <PrivateRoute><DonationRequestDetails /></PrivateRoute>
+      },
+      {
+        path:'/about',
+           element: <PrivateRoute><About></About></PrivateRoute>
       }
     ]
   },
