@@ -69,9 +69,12 @@ className={({ isActive }) =>
           Search Donors
         </NavLink>
       </li>
+
+      
         )
       }
-       <li>
+     { user &&(
+        <li>
         <NavLink
           to="/about"
 className={({ isActive }) =>
@@ -83,6 +86,7 @@ className={({ isActive }) =>
           About
         </NavLink>
       </li>
+     )}
     </>
   );
 
