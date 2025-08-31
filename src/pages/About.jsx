@@ -16,7 +16,7 @@ const About = () => {
         {/* Title */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-            About <span className="text-red-600">Blood Donation App</span>
+            About <span className="text-green-600">Blood Donation App</span>
           </h2>
           <p className="text-gray-600 max-w-3xl mx-auto">
             Blood Donation App is a life-saving initiative that connects donors

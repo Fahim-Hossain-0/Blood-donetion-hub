@@ -15,7 +15,7 @@ const Home = () => {
             <FeaturedSection/>
             <div>
             <Blogs></Blogs>
-            <Link to='/blogs' className="flex justify-center py-4 border border-green-500 w-[15%] mx-auto coursor-pointer mt-10 rounded-lg text-green-600 font-semibold hover:bg-green-500 hover:text-white transition">
+            <Link to='/blogs' className="flex justify-center py-2 border border-green-500 w-[15%] mx-auto coursor-pointer mt-10 rounded-lg text-green-600 font-semibold hover:bg-green-500 hover:text-white transition">
                   See All
                 </Link>
             </div>

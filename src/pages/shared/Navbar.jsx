@@ -25,7 +25,7 @@ const Navbar = () => {
           className={({ isActive }) =>
             isActive
               ? "text-gray-700 font-bold border-b-2 border-green-300 rounded-none"
-              : "text-green-200 font-semibold"
+              : "text-green-300 font-semibold"
           }
         >
           Home
@@ -37,7 +37,7 @@ const Navbar = () => {
           className={({ isActive }) =>
             isActive
               ? "text-gray-700 font-bold border-b-2 border-green-300 rounded-none"
-              : "text-green-200 font-semibold"
+              : "text-green-300 font-semibold"
           }
         >
           Donation Requests
@@ -49,7 +49,7 @@ const Navbar = () => {
 className={({ isActive }) =>
             isActive
               ? "text-gray-700 font-bold border-b-2 border-green-300 rounded-none"
-              : "text-green-200 font-semibold"
+              : "text-green-300 font-semibold"
           }
         >
           Blog
@@ -63,7 +63,7 @@ className={({ isActive }) =>
           className={({ isActive }) =>
             isActive
               ? "text-gray-700 font-bold border-b-2 border-green-300 rounded-none"
-              : "text-green-200 font-semibold"
+              : "text-green-300 font-semibold"
           }
         >
           Search Donors
@@ -77,7 +77,7 @@ className={({ isActive }) =>
 className={({ isActive }) =>
             isActive
               ? "text-gray-700 font-bold border-b-2 border-green-300 rounded-none"
-              : "text-green-200 font-semibold"
+              : "text-green-300 font-semibold"
           }
         >
           About

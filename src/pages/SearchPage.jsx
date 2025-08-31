@@ -55,7 +55,7 @@ const SearchPage = () => {
   };
 
   return (
-    <div className="max-w-3xl mx-auto mt-10 bg-white p-8 rounded-xl shadow-xl">
+    <div className="max-w-3xl mx-auto mt-30 mb-10 bg-white p-8 rounded-xl shadow-xl">
       <h2 className="text-3xl font-bold text-center mb-6 text-green-600">🔍 Find Blood Donors</h2>
 
       <form onSubmit={handleSearch} className="grid grid-cols-1 md:grid-cols-2 gap-4">

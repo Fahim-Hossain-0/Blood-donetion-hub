@@ -30,7 +30,7 @@ const DonationRequests = () => {
   if (isLoading) return <p className="text-center mt-8"><Loading /></p>;
 
   return (
-    <div className="p-6 max-w-7xl mx-auto space-y-4">
+    <div className="p-6 max-w-7xl mx-auto space-y-4 mt-24">
       <h2 className="text-3xl font-bold text-center text-green-600 mb-12">Blood Donation Requests</h2>
 
       {requests.length === 0 && (
